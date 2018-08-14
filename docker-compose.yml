@@ -50,7 +50,7 @@ services:
       - esnet
 
   vulnwhisp_nessus:
-    image: treadie/nessus:1
+    image: treadie/nessus:latest
     ports:
       - 8834:8834
     networks:
