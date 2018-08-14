@@ -49,8 +49,22 @@ services:
     networks:
       - esnet
 
+  portainer:
+    image: portainer/portainer
+    container_name: "vulnwhisperer-portainer-app"
+    ports:
+       - 9000:9000
+    networks:
+      - esnet
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+
+
 volumes:
   esdata1:
+    driver: local
+  portainer_data:
     driver: local
 
 networks:
