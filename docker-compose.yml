@@ -49,6 +49,14 @@ services:
     networks:
       - esnet
 
+  vulnwhisp_nessus:
+    image: treadie/nessus:1
+    ports:
+      - 8834:8834
+    networks:
+      - esnet
+
+
   portainer:
     image: portainer/portainer
     container_name: "vulnwhisperer-portainer-app"
