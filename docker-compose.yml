@@ -39,10 +39,15 @@ services:
       - 9390:9390
     environment:
        OV_PASSWORD: admin
-
     networks:
       - esnet
 
+  vulnwhisp_vulnwhisperer1:
+    image: danitfk/vulnwhisperer:1
+    environment:
+       OV_PASSWORD: admin
+    networks:
+      - esnet
 
 volumes:
   esdata1:
